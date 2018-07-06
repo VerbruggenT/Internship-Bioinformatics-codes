@@ -1,4 +1,5 @@
 # Internship-Bioinformatics-codes
+[![DOI](https://zenodo.org/badge/139984954.svg)](https://zenodo.org/badge/latestdoi/139984954)
 This is the repository for the codes used in my thesis during my internship at the department of Bioinformatics in Maastricht.
 
 The AOP-Wiki provides quarterly downloads. The full AOP-Wiki XML files can be downloaded from: https://aopwiki.org/downloads
