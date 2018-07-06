@@ -1,0 +1,12 @@
+PREFIX wp:      <http://vocabularies.wikipathways.org/wp#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?pathway str(?ensId) as ?geneProduct
+WHERE {
+    ?geneProduct a wp:GeneProduct . 
+    #?geneProduct rdfs:label ?label .
+    ?geneProduct wp:bdbEnsembl ?ensId .
+    ?geneProduct dcterms:isPartOf ?pathway .
+    ?pathway a wp:Pathway .
+    FILTER (regex(str(?ensId), "ENSG00000163918") || regex(str(?ensId), "ENSG00000049541") || regex(str(?ensId), "ENSG00000111846") || regex(str(?ensId), "ENSG00000136541") || regex(str(?ensId), "ENSG00000035928") || regex(str(?ensId), "ENSG00000122585") || regex(str(?ensId), "ENSG00000187094") || regex(str(?ensId), "ENSG00000115419") || regex(str(?ensId), "ENSG00000142507")).
+}
